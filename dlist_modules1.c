@@ -82,3 +82,17 @@ size_t dlistint_len(const stack_t *h)
 	}
 	return (count);
 }
+
+/**
+ * add_topnode - add top stack
+ * @stack: Pointed to head of a list
+ */
+void add_topnode(stack_t **stack)
+{
+	stack_t *tmp = *stack;
+	int data = 0;
+
+	data = tmp->n;
+	(tmp->next)->n += data;
+	delete_dnodeint_at_index(stack, 0);
+}
