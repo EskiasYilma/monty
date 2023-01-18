@@ -69,3 +69,14 @@ size_t print_dlistint(const stack_t *h)
 	}
 	return (count);
 }
+
+/**
+ * pr_head - print first elements of linked list
+ * @h: pointer to head
+ */
+void pr_head(const stack_t *head)
+{
+	const stack_t *tmp = head;
+
+	printf("%d\n", tmp->n);
+}

@@ -57,6 +57,7 @@ void (*exec_func(char *opcode))(stack_t **stack, unsigned int line_number);
 /* op Modules */
 void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
+void pint(stack_t **stack, unsigned int line_number);
 
 /* Doubly linked lists operations */
 stack_t *add_dnodeint(stack_t **head, const int n);
@@ -68,4 +69,5 @@ void print_error(char err[10], unsigned int line_number);
 
 /* Misc Modules */
 int _isdigit(void);
+void pr_head(const stack_t *head);
 #endif
