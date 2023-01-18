@@ -48,3 +48,37 @@ void delete_dnodeint_at_index(stack_t **head, unsigned int index)
 	dprintf(STDERR_FILENO, "L%d: can't pop an empty stack\n", gl_line_number);
 	exit(EXIT_FAILURE);
 }
+
+/**
+ * swap_nd - swaps the nodes of a doubly linked list
+ * @stack: pointer to head node
+ */
+void swap_nd(stack_t *stack)
+{
+	stack_t *temp = stack;
+	int data = 0;
+
+	data = temp->n;
+	temp->n = (temp->next)->n;
+	(temp->next)->n = data;
+}
+
+/**
+ * dlistint_len - returns number of nodes of a doubly linked list
+ * @h: pointer to head node
+ *
+ * Return: the number of nodes mentioned above
+ */
+size_t dlistint_len(const stack_t *h)
+{
+	size_t count = 0;
+
+	if (h == NULL)
+	return (0);
+	while (h != NULL)
+	{
+		count++;
+		h = h->next;
+	}
+	return (count);
+}
