@@ -17,8 +17,8 @@ void (*exec_func(char *opcode))(stack_t **stack, unsigned int line_number)
 		{"pint", pint},
 		{"pop", pop},
 		{"swap", swap},
-		{"swap", swap},
 		{"add", add},
+		{"nop", nop},
 		{NULL, NULL}
 	};
 	while (valid_code[i].opcode)
