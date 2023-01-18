@@ -58,11 +58,13 @@ void (*exec_func(char *opcode))(stack_t **stack, unsigned int line_number);
 void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
 void pint(stack_t **stack, unsigned int line_number);
+void pop(stack_t **stack, unsigned int line_number);
 
 /* Doubly linked lists operations */
 stack_t *add_dnodeint(stack_t **head, const int n);
 size_t print_dlistint(const stack_t *h);
 void free_dlistint(stack_t *head);
+void delete_dnodeint_at_index(stack_t **head, unsigned int index);
 
 /* Error Modules */
 void print_error(char err[10], unsigned int line_number);

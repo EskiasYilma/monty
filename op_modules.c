@@ -47,3 +47,22 @@ void pint(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 }
+
+/**
+ * pop - Delete the node at the beginning of the stack
+ * @stack: head pointer to stack
+ * @line_number: line number of file
+ */
+void pop(stack_t **stack, unsigned int line_number)
+{
+	(void)line_number;
+
+	if (stack && *stack)
+	{
+		delete_dnodeint_at_index(stack, 0);
+		return;
+	}
+	dprintf(STDERR_FILENO, "L%d: can't pop an empty stack\n",
+			gl_line_number);
+	exit(EXIT_FAILURE);
+}

@@ -15,6 +15,7 @@ void (*exec_func(char *opcode))(stack_t **stack, unsigned int line_number)
 		{"push", push},
 		{"pall", pall},
 		{"pint", pint},
+		{"pop", pop},
 		{NULL, NULL}
 	};
 	while (valid_code[i].opcode)
