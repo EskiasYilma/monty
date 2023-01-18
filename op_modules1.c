@@ -47,3 +47,14 @@ void add(stack_t **stack, unsigned int line_number)
 	gl_line_number);
 	exit(EXIT_FAILURE);
 }
+
+/**
+ * comment - doesnt do anything
+ * @stack: pointer to head of stack
+ * @line_number: number of the line in the bytecode file
+ */
+void comment(stack_t **stack, unsigned int line_number)
+{
+	(void) stack;
+	(void) line_number;
+}
