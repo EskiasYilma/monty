@@ -13,6 +13,7 @@ void read_n_tokenize(FILE *input)
 	stack_t *head = NULL;
 
 	gl_opcode = NULL;
+	byte_file = input;
 	lineptr = fgets(tokens, 1024, input);
 	while (!feof(input))
 	{
@@ -32,9 +33,7 @@ void read_n_tokenize(FILE *input)
 				gl_line_number = j;
 			}
 			if (i == 1)
-			{
 				gl_argv = token;
-			}
 			token = strtok(NULL, DELIM);
 			i++;
 		}
