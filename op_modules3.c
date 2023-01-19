@@ -25,3 +25,31 @@ void pchar(stack_t **stack, unsigned int line_number)
 			gl_line_number);
 	exit(EXIT_FAILURE);
 }
+
+/**
+ * pstr - prints the string starting at the top of the stack, followed
+ * by a new line
+ * @stack: pointer to head of stack
+ * @line_number: number of the line in the bytecode file
+ */
+void pstr(stack_t **stack, unsigned int line_number)
+{
+	stack_t *top = *stack;
+
+	(void)line_number;
+	if (top == NULL)
+		printf("\n");
+	while (top)
+	{
+		if ((top->n) >= 0 && (top->n) <= 127 && (top->n) != 0)
+		{
+			printf("%c", (char)(top->n));
+			top = top->next;
+		}
+		else
+		{
+			printf("\n");
+			break;
+		}
+	}
+}
