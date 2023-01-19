@@ -70,6 +70,23 @@ typedef struct instruction_s
 $ gcc -Wall -Werror -Wextra -pedantic *.c -o monty
 ````
 
+## OP-CODES Implemented
+
+```C
+push - USAGE push <int>
+pall - USAGE pall
+pint - USAGE pint
+pop  - USAGE pop
+swap - USAGE swap
+add  - USAGE add
+sub  - USAGE sub
+div  - USAGE div
+mul  - USAGE mul
+mod  - USAGE mod
+nop  - USAGE nop
+#
+```
+
 ## USAGE
 ````bash
 $ ./monty <monty_file>
