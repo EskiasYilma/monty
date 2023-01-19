@@ -16,7 +16,7 @@ void pchar(stack_t **stack, unsigned int line_number)
 			gl_line_number);
 		exit(EXIT_FAILURE);
 	}
-	if ((top->n) >= 0 || (top->n) <= 127)
+	if ((top->n) >= 0 && (top->n) <= 127)
 	{
 		printf("%c\n", (char)(top->n));
 		return;
