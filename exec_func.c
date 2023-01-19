@@ -18,6 +18,7 @@ void (*exec_func(char *opcode))(stack_t **stack, unsigned int line_number)
 		{"pop", pop},
 		{"swap", swap},
 		{"add", add},
+		{"sub", sub},
 		{"nop", nop},
 		{"#", comment},
 		{NULL, NULL}

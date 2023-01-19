@@ -61,6 +61,7 @@ void pint(stack_t **stack, unsigned int line_number);
 void pop(stack_t **stack, unsigned int line_number);
 void swap(stack_t **stack, unsigned int line_number);
 void add(stack_t **stack, unsigned int line_number);
+void sub(stack_t **stack, unsigned int line_number);
 void nop(stack_t **stack, unsigned int line_number);
 void comment(stack_t **stack, unsigned int line_number);
 
@@ -72,6 +73,7 @@ void delete_dnodeint_at_index(stack_t **head, unsigned int index);
 size_t dlistint_len(const stack_t *h);
 void swap_nd(stack_t *stack);
 void add_topnode(stack_t **stack);
+void sub_topnode(stack_t **stack);
 
 /* Error Modules */
 void print_error(char err[10], unsigned int line_number);
