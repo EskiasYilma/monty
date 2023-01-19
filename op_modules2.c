@@ -27,7 +27,7 @@ void sub(stack_t **stack, unsigned int line_number)
  * @line_number: number of the line in the bytecode file
  * Return: Nothing
  */
-void div(stack_t **stack, unsigned int line_number)
+void op_div(stack_t **stack, unsigned int line_number)
 {
 	(void)line_number;
 	if (dlistint_len(*stack) >= 2)
