@@ -27,24 +27,34 @@ void pchar(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * pstr -  prints the string starting at the top of the stack,
- * followed by a new line.
- * @stack: pointer to stack of stack
+ * pstr - prints the string starting at the top of the stack, followed
+ * by a new line
+ * @stack: pointer to head of stack
  * @line_number: number of the line in the bytecode file
- * Return: Nothing
  */
 void pstr(stack_t **stack, unsigned int line_number)
 {
-	stack_t *temp;
-	(void) line_number;
+	stack_t *top = *stack;
 
-	if (!stack || !*stack)
-		puts("");
-
-	temp = *stack;
-	while (temp != NULL && temp->n > 0 && temp->n < 127)
+	(void)line_number;
+	if (top == NULL)
 	{
-		printf("%c\n", temp->n);
-		temp = temp->next;
+		printf("\n");
+		return;
+	}
+	while (top)
+	{
+		if ((top->n) >= 0 && (top->n) <= 127 && (top->n) != 0
+				&& top != NULL)
+		{
+			printf("%c\n", (char)(top->n));
+			top = top->next;
+		}
+		else
+		{
+			printf("\n");
+			break;
+			return;
+		}
 	}
 }
