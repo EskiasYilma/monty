@@ -39,7 +39,7 @@ void pstr(stack_t **stack, unsigned int line_number)
 	(void) line_number;
 	if (*stack == NULL)
 	{
-		printf("\n");
+		printf("");
 		return;
 	}
 	temp = *stack;
@@ -48,5 +48,5 @@ void pstr(stack_t **stack, unsigned int line_number)
 		printf("%c", temp->n);
 		temp = temp->next;
 	}
-	printf("\n");
+	printf("");
 }
