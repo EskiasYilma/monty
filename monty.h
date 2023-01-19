@@ -63,6 +63,8 @@ void swap(stack_t **stack, unsigned int line_number);
 void add(stack_t **stack, unsigned int line_number);
 void sub(stack_t **stack, unsigned int line_number);
 void op_div(stack_t **stack, unsigned int line_number);
+void op_mul(stack_t **stack, unsigned int line_number);
+void op_mod(stack_t **stack, unsigned int line_number);
 void nop(stack_t **stack, unsigned int line_number);
 void comment(stack_t **stack, unsigned int line_number);
 
@@ -76,6 +78,8 @@ void swap_nd(stack_t *stack);
 void add_topnode(stack_t **stack);
 void sub_topnode(stack_t **stack);
 void div_topnode(stack_t **stack);
+void mul_topnode(stack_t **stack);
+void mod_topnode(stack_t **stack);
 
 /* Error Modules */
 void print_error(char err[10], unsigned int line_number);
