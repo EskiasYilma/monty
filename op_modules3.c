@@ -50,6 +50,7 @@ void pstr(stack_t **stack, unsigned int line_number)
 		{
 			printf("\n");
 			break;
+			return;
 		}
 	}
 }
