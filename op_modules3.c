@@ -38,10 +38,14 @@ void pstr(stack_t **stack, unsigned int line_number)
 
 	(void)line_number;
 	if (top == NULL)
+	{
 		printf("\n");
+		return;
+	}
 	while (top)
 	{
-		if ((top->n) >= 0 && (top->n) <= 127 && (top->n) != 0)
+		if ((top->n) >= 0 && (top->n) <= 127 && (top->n) != 0
+				&& top != NULL)
 		{
 			printf("%c", (char)(top->n));
 			top = top->next;
