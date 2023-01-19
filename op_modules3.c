@@ -44,10 +44,10 @@ void pstr(stack_t **stack, unsigned int line_number)
 	}
 	while (top)
 	{
-		if ((top->n) >= 0 && (top->n) <= 127 && (top->n) != 0
+		if ((top->n) > 0 && (top->n) < 127 && (top->n) != 0
 				&& top != NULL)
 		{
-			printf("%c\n", (char)(top->n));
+			printf("%c", (char)(top->n));
 			top = top->next;
 		}
 		else
