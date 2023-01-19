@@ -24,6 +24,7 @@ void (*exec_func(char *opcode))(stack_t **stack, unsigned int line_number)
 		{"mod", op_mod},
 		{"nop", nop},
 		{"#", comment},
+		{"pchar", pchar},
 		{NULL, NULL}
 	};
 	while (valid_code[i].opcode)
