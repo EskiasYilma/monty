@@ -69,6 +69,7 @@ void nop(stack_t **stack, unsigned int line_number);
 void comment(stack_t **stack, unsigned int line_number);
 void pchar(stack_t **stack, unsigned int line_number);
 void pstr(stack_t **stack, unsigned int line_number);
+void rotl(stack_t **stack, unsigned int line_number);
 
 /* Doubly linked lists operations */
 stack_t *add_dnodeint(stack_t **head, const int n);

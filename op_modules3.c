@@ -50,3 +50,24 @@ void pstr(stack_t **stack, unsigned int line_number)
 	}
 	printf("\n");
 }
+
+/**
+ * rotl - top element of the stack becomes the last one, and the second top
+ * element of the stack becomes the first one
+ * @stack: pointer to head of stack
+ * @line_number: number of the line in the bytecode file
+ */
+void rotl(stack_t **stack, unsigned int line_number)
+{
+	stack_t *temp = *stack;
+	int data = 0;
+
+	(void) line_number;
+	data = temp->n;
+	while (temp->next)
+	{
+		temp->n = (temp->next)->n;
+		temp = temp->next;
+	}
+	temp->n = data;
+}
